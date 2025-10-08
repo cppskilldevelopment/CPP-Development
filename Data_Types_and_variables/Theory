@@ -1,0 +1,137 @@
+1) What is Variable?
+=A variable is a named storage lacation in memory that holds a value.[It is type of container.]
+=You must declare a variable before using it.
+
+Code:
+ int age=21;
+ double salary=22073.50;
+
+Here:
+int =>data type(integer) , double =>data type(double)
+age=>variable name      ,  salary =>variable name
+21=>stored value        , 22073.50=>stored value
+
+Think of a variable as a box or container where you can store data.
+
+2. Basic Data Types in C++
+
+# Integer Types
+>int ->normal integers (4 bytes,range:-2,147,483,648 to 2,147,483,647)
+>short->smaller integers (2 bytes)
+>long/long long ->bigger integers (8 bytes for long long)
+
+Code:
+
+int a=10;
+short s=100;
+long L=10000;
+long long big=12345678912;
+
+#Floating-Point Types
+>float->single precision(~6 decimal digit)
+>double->double prcision(~15 decimal digit,default choice)
+>long double->extended precision (compiler-dependent,~18+ digit)
+
+Code:
+
+float pi=3.14;
+double e=2.71897878;
+long long ID=3.1415932214434L;
+
+# Character Types
+char->stores a single character (1 byte)
+ 
+Code:
+char grade='A';
+ Actually stores ASCII code('A'=65)
+
+#Boolean type;
+bool->stores true(1) or false (0)
+ 
+Code:
+bool isReady=true;
+
+3.Modifiers
+
+C++ allows modifying data types for size/range:
+
+>signed->can be negative (default for int/char)
+>unsigned->only non-nagative values
+>short,long->change size of integers
+
+Code:
+unsigned int U=50;
+signed int s = -50;
+
+4. Derived Data Types
+
+Array->Collection of same type
+
+int arr[5]={1,2,3,4,5};
+
+pointer->Stores memory address 
+
+int x=10;
+int *ptr=&x;
+
+Referance-.alias for another variable
+
+int y=10;
+int &ref=y;
+
+5. User-defined Data Types
+>struct-> groups different variables
+>class->OOP feature
+>enum->named constants
+
+enum Color {Red,Green,Blue};
+Color c=Red;
+
+6.Variable Declaration Styles
+
+int x;
+x=10;
+int y=20;
+
+7. Type sizes(Platform dependent)
+Use sizeof() operator
+cout<< sizeof(int)<<endl;
+cout<<sizeof(double)<<endl;
+
+8.Constants
+Use const or constexpr:
+
+const double PI=3.14159;
+constexpr int SIZE=100;
+
+9.Type Casting
+Explicit conversion between types:
+
+int a=5;
+double b=(double)a/2;
+float c=(float)a/2;
+
+Basic Types: int ,float,double,char, bool
+Modifiers:signed,unsigned,short,long
+Derived types:array,pointer,reference
+User-defined:struct,class,enum
+Initialization styles:=,(),{}
+
+
+
+| **Category**  | **Type**             | **Size (bytes)** | **Range** (approx)                           | **Example**                               |
+| ------------- | -------------------- | ---------------- | -------------------------------------------- | ----------------------------------------- |
+| **Integer**   | `short`              | 2                | -32,768 to 32,767                            | `short s = 100;`                          |
+|               | `unsigned short`     | 2                | 0 to 65,535                                  | `unsigned short us = 500;`                |
+|               | `int`                | 4                | -2,147,483,648 to 2,147,483,647              | `int a = -123;`                           |
+|               | `unsigned int`       | 4                | 0 to 4,294,967,295                           | `unsigned int b = 123;`                   |
+|               | `long`               | 4 or 8           | system dependent (same as `int` or bigger)   | `long l = 100000;`                        |
+|               | `long long`          | 8                | -9e18 to +9e18                               | `long long big = 1234567890123;`          |
+|               | `unsigned long long` | 8                | 0 to 18e18                                   | `unsigned long long ubig = 999999999;`    |
+| **Floating**  | `float`              | 4                | ~±3.4e−38 to ±3.4e+38 (6–7 digits precision) | `float pi = 3.14f;`                       |
+|               | `double`             | 8                | ~±1.7e−308 to ±1.7e+308 (15–16 digits)       | `double e = 2.718281828;`                 |
+|               | `long double`        | 8, 12, or 16     | Higher precision (depends on compiler)       | `long double ld = 3.141592653589793238L;` |
+| **Character** | `char`               | 1                | -128 to 127 (signed) OR 0 to 255 (unsigned)  | `char grade = 'A';`                       |
+| **Boolean**   | `bool`               | 1                | `true` (1) or `false` (0)                    | `bool flag = true;`                       |
+| **Void**      | `void`               | 0                | No storage (used for functions w/o return)   | `void func();`                            |
+| **Wide Char** | `wchar_t`            | 2 or 4           | Larger set of characters (Unicode)           | `wchar_t wc = L'Ω';`                      |

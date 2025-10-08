@@ -1,0 +1,35 @@
+C++ is a genral purpose programming language created by Bjarne Stroustrup in
+1979 at Bell labs as an extension of C language. It is often called "C with 
+Classes" because it adds the concepts of object-Oriented programming (OOP) 
+to the C language.
+
+Features Of C++:
+1) Copiled Language: Translate human readable code into machin code
+2) Middle-level language: Supports both low-level(hardware ) and high level(User-level) programming.
+3) Object oriented programming: Supports classses,objects,inheritance,abstraction,Encapsulation,Polymorphism
+4) Rich-standard library: provide many inbuilt functions
+5) Portable: Same program can run on multiple platforms with little/no modification.
+6)Memory Management: Allows Manual coutrol and also supports smart pointers in modern C++.
+7) Multi Paradigm: Supports Procedural Programming (like C) and OOP
+
+
+Structure Of C++ program:
+
+#include<iostream>         //preprocessor directive
+using namespace std;       //Using standard namespace
+
+int main()                 //Main function
+{
+
+    cout<<"Hello Ashu"     //Output statement
+
+    return 0;              // Exit status of the program
+}
+
+Breakdown:
+= #include<iostream>    => Includes input/output stream library
+= using namespace std;  =>allows usage of standard library names without prefixing std::
+= int main()            =>starting point of every c++ program
+= cout                  =>Console output
+= return 0;             =>Ends the program succesfully
+
